@@ -7,50 +7,58 @@
     <title>jeux de x_o</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" type="text/css">
     <link rel="stylesheet" href="bstrp.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="bosstrap.js"></script>
 <style>
 </style>
 </head>
 <body>
-    <header class="bg-info p-2" style="position: fixed; top:0;left:0;right:0;">
+    <header class="bg-dark p-2" style="position: fixed; top:0;left:0;right:0;">
          <h2 class="text-white d-flex align-items-center">le jeux de x-o</h2>
     </header>
-    <div class="row d-flex justify-content-center align-items-center pt-5 mt-5" style="height:70vh !important">
-        <div class="col-md-6 container">
-            <div class="d-flex justify-content-between align-items-center">
-                <p  class="btn btn-sm bg-light border-info my-0" onclick="vt();">Recomencer</p>
-                <div class="d-flex">
+    <img src="img.gif" alt="">
+    <div class="d1">
+        <div class="div1 row d-flex justify-content-center align-items-center pt-5 mt-5" style="height:70vh !important">
+            <div class="col-md-6 container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <p  class="btn btn-sm bg-light border-info my-0" onclick="vt();">Recomencer</p>
+                    <div class="d-flex">
                         <div class="input-group">
                            <span class="input-group-text">X</span>
                            <input type="button" class="form-control" value=" " id="bt"/>
                         </div>
-                    <div class="input-group">
-                        <span class="input-group-text">Y</span>
-                        <input type="button" class="form-control ronded" value=" " id="bt1"/></p>
-                    </div>
+                        <div class="input-group">
+                            <span class="input-group-text">Y</span>
+                            <input type="button" class="form-control ronded" value=" " id="bt1"/></p>
+                        </div>
                 </div>
             </div>
             <table class="table">
-            <tr><td class="p-0 w-25"><input class="w-100 py-4 bg-light text-center border-success text-dark btn btn-block" type="button" name="bt1" value=" " id="ix1" onclick="ch1();"/>
+                <tr><td class="p-0 w-25"><input class="w-100 py-4 bg-light text-center border-success text-dark btn btn-block" type="button" name="bt1" value=" " id="ix1" onclick="ch1();"/>
             </td><td class="p-0 w-25"><input  class="w-100 py-4 bg-light text-center border-success text-dark btn btn-block" type="button" name="bt2" value=" " id="ix2" onclick="ch2();"/></td>
             <td class="p-0 w-25"><input  class="w-100 py-4 bg-light text-center border-success text-dark btn btn-block" type="button" name="bt3" value=" " id="ix3" onclick="ch3();"/></td></tr>
             <tr><td class="p-0 w-25"><input  class="w-100 py-4 bg-light text-center border-success text-dark btn btn-block" type="button" name="bt4" value=" " id="ix4" onclick="ch4();"/></td>
-            <td class="p-0 w-25"><input  class="w-100 py-4 bg-light text-center border-success text-dark btn btn-block" type="button" name="bt5" value=" " id="ix5" onclick="ch5();"/></td>
-            <td class="p-0 w-25"><input  class="w-100 py-4 bg-light text-center border-success text-dark btn btn-block" type="button" name="bt6"  value=" " id="ix6" onclick="ch6();"/></td></tr>
-            <tr><td class="p-0 w-25"><input class="w-100 py-4 bg-light text-center border-success text-dark btn btn-block" type="button" name="bt7"  value=" " id="ix7" onclick="ch7();"/>
-            </td><td class="p-0 w-25"><input  class="w-100 py-4 bg-light text-center border-success text-dark btn btn-block" type="button" name="bt8"  value=" " id="ix8" onclick="ch8();"/></td>
-            <td class="p-0 w-25"><input class="w-100 py-4 bg-light text-center border-success text-dark btn btn-block" type="button" name="bt9"   value=" " id="ix9" onclick="ch9();"/></td></tr>
-          </table>
-
+                <td class="p-0 w-25"><input  class="w-100 py-4 bg-light text-center border-success text-dark btn btn-block" type="button" name="bt5" value=" " id="ix5" onclick="ch5();"/></td>
+                <td class="p-0 w-25"><input  class="w-100 py-4 bg-light text-center border-success text-dark btn btn-block" type="button" name="bt6"  value=" " id="ix6" onclick="ch6();"/></td></tr>
+                <tr><td class="p-0 w-25"><input class="w-100 py-4 bg-light text-center border-success text-dark btn btn-block" type="button" name="bt7"  value=" " id="ix7" onclick="ch7();"/>
+                </td><td class="p-0 w-25"><input  class="w-100 py-4 bg-light text-center border-success text-dark btn btn-block" type="button" name="bt8"  value=" " id="ix8" onclick="ch8();"/></td>
+                <td class="p-0 w-25"><input class="w-100 py-4 bg-light text-center border-success text-dark btn btn-block" type="button" name="bt9"   value=" " id="ix9" onclick="ch9();"/></td></tr>
+            </table>
+            
         </div>
     </div>
+</div>
+<div class="d2">
+
     <footer class="bg-light d-flex justify-content-between px-3 py-3 mt-5" style="position: fixed;bottom:0;left:0;right:0;">
         <small class="text-primary">&copy; Abderrazzak khouy</small>
         <a href="mailto:abderrazzakkhouy790@gmail.com">
-          <i class="fa-solid fa-envelope text-primary"></i>
+            <i class="fa-solid fa-envelope text-primary"></i>
         </a>
-      </footer>
+    </footer>
+</div>
   <script>
+    $('img').hide();
 var i=0;
 var m=0;
 var n=0;
@@ -107,11 +115,23 @@ if((m1=='X' && m2=='X'&& m3=='X')||(m4=='X' && m5=='X'&& m6=='X')||(m7==='X' && 
    m=m+1;
     dd();
     i=10;
+    $('.d1,.d2,header').hide()
+    $('img').show()
+    $('img').width('100vw')
+    $('img').height('100vh')
+    $('.d1,.d2,header').show(2000);
+    $('img').hide(2000)
 }
 if((m1=='O' && m2=='O'&& m3=='O')||(m4=='O' && m5=='O'&& m6=='O')||(m7==='O' && m8=='O'&& m9=='O')||(m1=='O' && m4=='O'&& m7=='O')||(m2=='O' && m5=='O'&& m8=='O')||(m3=='O' && m6=='O'&& m9=='O')||(m3=='O' && m5=='O'&& m7=='O')||(m1=='O' && m5=='O'&& m9=='O')){
     n=n+1;
     dd1();
     i=10;
+    $('.d1,.d2,header').hide()
+    $('img').show()
+    $('img').width('100vw')
+    $('img').height('100vh')
+    $('.d1,.d2,header').show(2000);
+    $('img').hide(2000)
 }
 }
 }
@@ -281,7 +301,6 @@ function ch9(){
     }
     }
 }
-
   </script>
 </body>
 </html>
